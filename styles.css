@@ -1,0 +1,183 @@
+/* ---------- Global Styles ---------- */
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Header ---------- */
+.header {
+  background: #95c9ea;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.nav a {
+  margin-left: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.nav .btn:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+.btn.clicked {
+  transform: scale(0.95);
+  background: #e6b800;
+}
+
+/* ---------- About ---------- */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about p {
+  font-size: 1.1rem;
+}
+
+/* ---------- Projects ---------- */
+.project-card {
+  background: #fafafa;
+  padding: 20px;
+  border-left: 4px solid #1a1a1a;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transform: translateX(5px);
+}
+
+.project-card.expanded {
+  max-height: 500px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Skills ---------- */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill:hover,
+.skill.highlighted {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* ---------- Education ---------- */
+.edu-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 4px solid #1a1a1a;
+}
+
+/* ---------- Interactive Section Effects ---------- */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ---------- Active Navigation Link ---------- */
+.nav a.active {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
+}
